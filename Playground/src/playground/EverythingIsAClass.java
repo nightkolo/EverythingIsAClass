@@ -18,7 +18,7 @@ public class EverythingIsAClass {
         double score = 75.0;
 
         boolean userWon = score > threshold;
-
+        
         if (userWon) {
             System.out.println("Congratulations! Your score of " + score + " is above " + threshold + ".");
         } else {
