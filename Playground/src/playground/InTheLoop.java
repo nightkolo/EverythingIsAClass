@@ -23,6 +23,9 @@ public class InTheLoop {
     // break and continue statements
     // for loops
     // nested structures
+    // 
+    // I also did lots of other exercises, but these are ignored for now.
+    // I might commit them later
     
     public static void main(String[] args) {
         // I'll attempt the exercises
