@@ -1,0 +1,2 @@
+The rectangle's area: 200.0
+The rectangle's perimeter: 40.0
