@@ -9,6 +9,8 @@ import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+// NOTE: initialize the FileReader inside the try block directly. No need to set fr = null; 
+
 public class Geometry {
     public static void main(String[] args) {
         FileReader fr = null;
@@ -25,6 +27,7 @@ public class Geometry {
             outFile.println("The rectangle's perimeter: " + (2.0 * (width + height)));
 
             // Seal the cage.
+            // Close input and output streams to avoid resource leaks
             inFile.close();
             outFile.close();
 
