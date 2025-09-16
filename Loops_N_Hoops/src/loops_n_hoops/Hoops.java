@@ -47,7 +47,7 @@ public class Hoops {
         double hiddenTaxBecauseScrewYouCustomer = 0.05;
 
         double newPrice = price * (1.0 - discount) * (1.0 + hiddenTaxBecauseScrewYouCustomer);
-        System.out.println(String.format("Price of your item after %.2f percent discount and %.2f percent tax: %f $",
+        System.out.println(String.format("Price of your item after %.2f%% discount and %.2f%% tax: %f$",
                 discount * 100.0,
                 hiddenTaxBecauseScrewYouCustomer * 100.0,
                 newPrice));
