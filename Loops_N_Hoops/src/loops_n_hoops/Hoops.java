@@ -32,7 +32,7 @@ public class Hoops {
     }
 
     // Write a method that receives the radius of a circle, then calculates and returns the area of that circle.
-    static public double getRadius(double radius) {
+    static public double getRadius(double radius) 
         return Math.PI * Math.pow(radius, 2);
     }
 
