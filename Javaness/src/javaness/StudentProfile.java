@@ -8,7 +8,6 @@ package javaness;
  *
  * @author kolo
  */
-
 // Create a Java Application in NetBeans with the following two classes.
 
 //1.	A class StudentProfile with the following private attributes:
@@ -77,12 +76,4 @@ class StudentProfile {
       );
   }
 
-}
-
-public class Main2 {
-    public static void main(String[] args) {
-        StudentProfile stu1 = new StudentProfile("Herogo", 85);
-
-        System.out.println(stu1);
-    }
 }
