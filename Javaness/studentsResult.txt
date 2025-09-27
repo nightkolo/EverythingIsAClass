@@ -1,0 +1,8 @@
+Student name: Ahmed Saleh , Score: 87, Grade: B
+msg B Ahmed Saleh  1
+Student name: Ameen Nagi Ali , Score: 92, Grade: A
+msg A 3 Ameen Nagi Ali  format
+Student name: Amal , Score: 72, Grade: C
+msg C Amal  3
+Student name: Asma Saeed , Score: 61, Grade: D
+msg D Asma Saeed  2
