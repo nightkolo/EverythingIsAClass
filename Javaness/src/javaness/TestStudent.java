@@ -47,10 +47,10 @@ public class TestStudent {
 
                 StudentProfile stu = new StudentProfile(name, Integer.parseInt(words[words.length - 1]));
                 
-                StudentCommenter com = new StudentCommenter(stu);
+//                StudentCommenter com = new StudentCommenter(stu);
                 
                 outFile.println(stu.toString());
-                outFile.println(com.comment());
+//                outFile.println(com.comment());
             }
             inFile.close();
             outFile.close();

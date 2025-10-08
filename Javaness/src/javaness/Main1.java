@@ -32,53 +32,33 @@ package javaness;
 // Fields: String roman, int decimal
 // Constructor: accepts Roman numeral, auto-converts to decimal.
 
-class Roman {
-    // TODO: check every character in a string
-    // for loop, text.length, charAt()
-    // charAt return char
-    private String roman;
-    private int toDecimal;
+class MC {
+    private String var1;
     
-    public Roman(String rom){
-        roman = rom;
-        
+    public MC(){
+        this("hello");
     }
     
-    public void romanToDecimal(String roman) {
-        int value = 1;
-        
-        for (int i = 0; i < roman.length(); i++) {
-            char c = roman.charAt(i);
-            
-            // How thrilling... if else statements...
-            if (c == 'M') {
-                value += 1000;
-            } else if (c == 'D') {
-                value += 500;
-            } else if (c == 'C') {
-                value += 100;
-            } else if (c == 'L') {
-                value += 50;
-            } else if (c == 'X') {
-                value += 10;
-            } else if (c == 'V') {
-                value += 5;
-            } else if (c == 'I') {
-                value++;
-            }
-        }
-        
-        value = toDecimal;
-        
+    public MC(String msg){
+        this.var1 = msg;
+    }
+    
+    public MC same(){
+        return this;
     }
 }
+
+
 public class Main1 {
     public static void main(String[] args) {
-        String msg = "MDCLXVI";
+//        String msg = "MDCLXVI";
+//        
+//        Roman roman = new Roman();
+//        
+//        int lovelyNumber = roman.romanToDecimal(msg);
+//        System.out.println(lovelyNumber);
         
-        Roman roman = new Roman();
-        
-        int lovelyNumber = roman.romanToDecimal(msg);
-        System.out.println(lovelyNumber);
+
+
     }
 }

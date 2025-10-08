@@ -34,9 +34,9 @@ public class StudentCommenter {
         "Placeholder D message, %s 3"
     };
     private String[] msgsF = {
-        "Placeholder D message, %s 1",
-        "Placeholder D message, %s 2",
-        "Placeholder D message, %s 3"
+        "Placeholder F message, %s 1",
+        "Placeholder F message, %s 2",
+        "Placeholder F message, %s 3"
     };
     
     public StudentCommenter(StudentProfile stu){
