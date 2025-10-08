@@ -22,6 +22,7 @@ public class LetsWatchAMovie {
         movie1.addRating(5.5);        
         movie1.addRating(-444.0);
         
+        System.out.println(movie1.toString());
         System.out.println(movie2.toString());
 
 

@@ -8,7 +8,6 @@ package javaness2;
  *
  * @author kolo
  */
-
 // 	1.	Constructor
 // Initializes the movie title, sets ratings and watch counts to 0.
 // 	2.	add_rating(double rating)
@@ -27,8 +26,8 @@ public class Movie {
     private String title;
     private int timesWatched;
     private int ratingsCount;
+    private int reviewsCount;
     private double ratingsSum;
-
     // NOTE totalMoviesWatched is public static int.
     // That breaks encapsulation; any external class can reset it. Make it private static with a getter.
     private static int totalMoviesWatched;
@@ -62,12 +61,25 @@ public class Movie {
     public int getTimesWatched() { return this.timesWatched; }
     public int getRatingsCount() { return this.ratingsCount; }
     public double getRatingsSum() { return this.ratingsSum; }
+    public static int getTotalMoviesWatched() { return totalMoviesWatched; }
+    @Override
+    public boolean equals(Object obj) {
+  //    Checks if the two references point to the exact same object in memory.
+	//   	If they do, they’re obviously equal.
+        if (this == obj) return true;
+  //    Makes sure that the object is actually a Movie.
+	//    If it isn’t, return false immediately. This prevents type errors.
+        if (!(obj instanceof Movie)) return false;
+  //    now that we know obj is a Movie, we can treat it as one with safe casting
+        Movie other = (Movie) obj;
+        return this.title.equals(other.title);
+    }
     @Override
     public String toString(){
-      return String.format("Movie: %s, Watched: %d, Avg. Rating: %s",
+      return String.format("Movie Title: %s, Watched: %d, Avg. Rating: %s",
         this.title,
         this.timesWatched,
-        (getAverageRating() == 0.0) ? "N/A" : String.format("%.2f", getAverageRating()) // why didnt i think of this
+        (getAverageRating() == 0.0) ? "N/A" : String.format("%.2f", getAverageRating())
         );
     }
 }
