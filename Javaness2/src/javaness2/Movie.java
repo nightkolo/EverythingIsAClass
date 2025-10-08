@@ -24,6 +24,7 @@ package javaness2;
 // Returns a summary string like:
 public class Movie {
     private String title;
+    private int year;
     private int timesWatched;
     private int ratingsCount;
     private int reviewsCount;
@@ -32,8 +33,9 @@ public class Movie {
     // That breaks encapsulation; any external class can reset it. Make it private static with a getter.
     private static int totalMoviesWatched;
     
-    public Movie(String name){
+    public Movie(String name, int year){
       this.title = name;
+      this.year = year;
       this.timesWatched = 0;
       this.ratingsCount = 0;
       this.ratingsSum = 0;
@@ -58,6 +60,7 @@ public class Movie {
       totalMoviesWatched++;
     }
     public String getTitle() { return this.title; }
+    public int getYear() { return this.year; }
     public int getTimesWatched() { return this.timesWatched; }
     public int getRatingsCount() { return this.ratingsCount; }
     public double getRatingsSum() { return this.ratingsSum; }
