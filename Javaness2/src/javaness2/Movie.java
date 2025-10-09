@@ -79,8 +79,9 @@ public class Movie {
     }
     @Override
     public String toString(){
-      return String.format("Movie Title: %s, Watched: %d, Avg. Rating: %s",
+      return String.format("Movie Title: %s (%d), Watched: %d, Avg. Rating: %s",
         this.title,
+        this.year,
         this.timesWatched,
         (getAverageRating() == 0.0) ? "N/A" : String.format("%.2f", getAverageRating())
         );

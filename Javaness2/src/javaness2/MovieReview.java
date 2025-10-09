@@ -11,35 +11,49 @@ package javaness2;
 public class MovieReview {
     private String user;
     private Movie movie;
-    private double rating;
+    private double rate;
     private String review;
-    private static final int MAX_CHARACTERS = 1000;
-    private static final int MAX_NAME_CHAR = 15;
+    public static final int MAX_CHARACTERS = 1000;
+    public static final int MAX_NAME_CHAR = 15;
 
     public MovieReview(){
-        this("unknown", null, "", 1.0);
+        this("unknown", null, 1.0, "");
     }
     public MovieReview(String user, Movie movie, double rate, String review){
-        this.user = user.substring(0, MAX_NAME_CHAR);
+        this.user = (user.length() > MAX_NAME_CHAR) ? user.substring(0, MAX_NAME_CHAR) : user;
         this.movie = movie;
-        updateReview(review);
-        setRating(rate);
+        this.updateReview(review);
+        this.updateRate(rate);
     }
-    public void updateRating(double rate){
-        this.rating = (rate < 1.0) ? 1.0 : (rate > 5.0) ? 5.0 : rating;
-        // if (rate < 1.0){ this.rating = 1.0; }
-        // else if (rate > 5.0) { this.rating = 5.0; }
-        // else { this.rating = rate; }
+    public void updateRate(double rate){
+        this.rate = (rate < 1.0) ? 1.0 : (rate > 5.0) ? 5.0 : rate;
+        // if (rate < 1.0){ this.rate = 1.0; }
+        // else if (rate > 5.0) { this.rate = 5.0; }
+        // else { this.rate = rate; }
     }
     public void updateReview(String review) {
-        this.review = review.substring(0, MAX_CHARACTERS);
+        if (review.length() > MAX_CHARACTERS){
+            this.review = review.substring(0, MAX_CHARACTERS);
+        } else {
+            this.review = review;
         }
+    }
     
-    public Movie getMovie() { return movie; }
-    public double getRating() { return rating; }
+    public Movie getMovie() { return this.movie; }
+    public String getUser() { return this.user; }
+    public double getrate() { return rate; }
     public String getReview() { return review; }
     @Override
     public String toString(){
-        return String.format("")
+        String title = (movie != null) ? movie.getTitle() : "No movie"; // null safety
+        int year = (movie != null) ? movie.getYear() : 0; // null safety
+
+        return String.format("%s (%d) \nRating: %.1f\n%s \nReviewed by %s.",
+            title,
+            year,
+            this.rate,
+            this.review,
+            this.user
+            );
     }
 }

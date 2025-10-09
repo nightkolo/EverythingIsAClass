@@ -11,8 +11,8 @@ package javaness2;
 public class LetsWatchAMovie {
     public static void main(String[] args) {
         
-        Movie movie1 = new Movie("The Wild Robot");
-        Movie movie2 = new Movie("Cars (2006)");
+        Movie movie1 = new Movie("The Wild Robot", 2025);
+        Movie movie2 = new Movie("Cars", 2006);
         
         movie1.addRating(5.0);
         movie1.addRating(5.0);
@@ -25,7 +25,9 @@ public class LetsWatchAMovie {
         System.out.println(movie1.toString());
         System.out.println(movie2.toString());
 
-
+        MovieReview review1 = new MovieReview("Kologen", movie1, 5.5, "Masterpiece.");
+        
+        System.out.println(review1);
         
     }
 }
