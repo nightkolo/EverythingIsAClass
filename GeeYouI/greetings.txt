@@ -1,0 +1,4 @@
+Hello : English
+Bonjour : French
+Bonasera : Italian
+Mar7aba : Arabic

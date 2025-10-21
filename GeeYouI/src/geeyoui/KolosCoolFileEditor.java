@@ -156,8 +156,7 @@ public class KolosCoolFileEditor extends javax.swing.JFrame {
     }//GEN-LAST:event_readBtnActionPerformed
 
     private void writeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_writeBtnActionPerformed
-        // TODO add your handling code here:
-        
+
         String fileName = outputFileTF.getText().trim();
         PrintWriter inFile = null;
         
@@ -171,12 +170,6 @@ public class KolosCoolFileEditor extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             statusLabel.setText(String.format("Could not write %s to this Project Directory", fileName));
         }
-
-        
-        
-//        } catch (FileNotFoundException ex) {
-//            statusLabel.setText(String.format("Could not find %s in this Project Directory", fileName));
-//        }
     }//GEN-LAST:event_writeBtnActionPerformed
 
     /**
