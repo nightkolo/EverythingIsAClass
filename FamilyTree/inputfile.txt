@@ -1,0 +1,21 @@
+20
+s Saeid 312
+s Mohammed 124
+e Mansoor 12300
+e Mohammed 11000
+e Zayed 7500 
+s Salem 751 
+s Nasser 613
+e Nasser 6900
+s Saeed 312
+e Saeed 8000
+e Maryam 8100
+s Mohammad 813
+s Mariam 543
+s Shamma 712
+s Naser 784
+e Fatema 15000
+e Asma 7100
+e Khaled 12800
+e Khalifah 9600
+s Salim 751
