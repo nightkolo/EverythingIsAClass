@@ -60,16 +60,58 @@ public class Tester {
                 System.out.println(persons[i]);
             }
             
+            System.out.println("");
+//d.	Write code to check if there is a duplicate records of students and print them out
+        
+            for (int a = 0; a < persons.length; a++){
+                if (!(persons[a] instanceof Student)) continue;
+                
+                for (int b = 0; b < persons.length; b++){
+                    if (!(persons[b] instanceof Student) || a == b) continue;
+                    
+                    if (persons[b].equals(persons[a])){
+                        System.out.println(persons[b]);
+                    }
+                }
+            }
+        
+//e.	Write code to check if there is a student and employee who have the same name and print them out. 
+
+            for (int a = 0; a < persons.length; a++){
+                Person p1 = persons[a];
+                
+                boolean isStudent = (p1 instanceof Student);
+                
+                for (int b = 0; b < persons.length; b++){
+                    if (a == b) continue;
+                    
+                    Person p2 = persons[b];
+                    
+                    if (isStudent){
+                        if (p2 instanceof Employee && p2.getName().equals(p1.getName())){
+                            System.out.println(p2);
+                        }
+                    } else {
+                        if (p2 instanceof Student && p2.getName().equals(p1.getName())){
+                            System.out.println(p2);
+                        }
+                    }
+                }
+            }
+
+//f.	Write code to print out the 3 employee with the highest salary
+            
+            
             
         } catch (java.io.FileNotFoundException ex){
             
         }
+        
+        
 
 //b.	Create a Person array with the size from step a.
 
-//d.	Write code to check if there is a duplicate records of students and print them out
-//e.	Write code to check if there is a student and employee who have the same name and print them out. 
-//f.	Write code to print out the 3 employee with the highest salary
+
 
     }
 }
