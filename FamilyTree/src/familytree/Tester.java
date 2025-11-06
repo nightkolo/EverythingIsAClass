@@ -101,10 +101,36 @@ public class Tester {
 
 //f.	Write code to print out the 3 employee with the highest salary
             
+            // f. Write code to print out the 3 employees with the highest salary
+
+            Employee[] top3 = new Employee[3]; // to hold top 3 employees
+
+            for (int a = 0; a < persons.length; a++) {
+                if (!(persons[a] instanceof Employee)) continue;
+
+                Employee current = (Employee) persons[a];
+
+                for (int i = 0; i < 3; i++) {
+                    if (top3[i] == null || current.getSalary() > top3[i].getSalary()) {
+                        for (int j = 2; j > i; j--) {
+                            top3[j] = top3[j - 1];
+                        }
+                        top3[i] = current;
+                        break;
+                    }
+                }
+            }
+            System.out.println("");
+            for (int i = 0; i < 3; i++) {
+                if (top3[i] != null) {
+                    System.out.println(top3[i]);
+                }
+            }
+
             
             
         } catch (java.io.FileNotFoundException ex){
-            
+            System.out.println("FILE NOT FOUND!!1!!2!111");
         }
         
         
